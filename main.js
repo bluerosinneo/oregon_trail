@@ -20,6 +20,7 @@
     };
 
     function Doctor(name){
+        
         Traveler.call(this, name);
 
     }
@@ -34,7 +35,7 @@
         this.food = 2;
     }
     Hunter.prototype = Object.create(Traveler.prototype);
-    Hunter.prototype.console = Hunter;
+    Hunter.prototype.constructor = Hunter;
     Hunter.prototype.hunt = function(){
         this.food = this.food + 5;
     }
